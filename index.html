@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #b3e5fc, #ffcccb);
+    height: 100vh;
+    overflow: hidden;
+    color: #333;
+}
+
+.error-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.error-text {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    text-align: left;
+    color: #fff;
+}
+
+.error-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.error-text p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.error-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.error-text a:hover {
+    text-decoration: underline;
+}
+
+.floating-image img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(20px);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-text">
+            <h1>Something's wrong here...</h1>
+            <p>Uh oh, we couldn't find the link you clicked.<br>
+            Most URLs are 4-6 characters, and only include letters and numbers (and are case sensitive).</p>
+            <p><a href="/http-errors">Would you like to learn about HTTP errors?</a></p>
+        </div>
+        <div class="floating-image">
+            <img src="puffer-fish.png" alt="Pufferfish">
+        </div>
+    </div>
+</body>
+</html>
